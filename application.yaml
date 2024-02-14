@@ -4,11 +4,11 @@ metadata:
   name: my-helm-chart
 spec:
   destination:
-    namespace: my-namespace
+    namespace: nginx
     server: https://kubernetes.default.svc
   source:
-    repoURL: https://github.com/your/repo
-    path: path/to/helm/chart
+    repoURL: https://github.com/HIRO-MicroDataCenters-BV/argocd-demo.git
+    path: hello-world-chart/hello-world
     targetRevision: main
   helm:
     valueFiles:
