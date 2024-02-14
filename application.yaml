@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-helm-chart
+spec:
+  destination:
+    namespace: my-namespace
+    server: https://kubernetes.default.svc
+  source:
+    repoURL: https://github.com/your/repo
+    path: path/to/helm/chart
+    targetRevision: main
+  helm:
+    valueFiles:
+      - values.yaml
